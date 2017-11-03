@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/rhel7
 
 RUN yum update -y && yum -y install freeradius freeradius-ldap freeradius-utils \
-    wpa_supplicant --enablerepo=rhel-7-server-optional-rpms
+    wpa_supplicant hostname --enablerepo=rhel-7-server-optional-rpms
 
 ADD ./templates/users /etc/raddb/users
 
